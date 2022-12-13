@@ -21,16 +21,12 @@ sites:
     port: 2022
   - name: Mail
     check: "tcp-ping"
-    url: http://mail.fastguard.ro
+    url: 116.203.189.202
     port: 587
   - name: Webmail
     url: https://webmail.fastguard.ro
   - name: File Uploader
     url: https://i.fastguard.ro
-  - name: TeamSpeak 3 Server
-    check: "tcp-ping"
-    url: 185.225.3.206
-    port: 9987
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain

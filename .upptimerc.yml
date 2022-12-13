@@ -3,19 +3,40 @@ owner: hardixnph # Your GitHub organization or username, where this repository l
 repo: fastguard-uptime # The name of this repository
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
+  - name: Database
+    check: "tcp-ping"
+    url: 116.203.189.202
+    port: 3306
+  - name: Homepage
+    url: https://fastguard.ro
+  - name: Pterodactyl
+    url: https://pterodactyl.fastguard.ro
+  - name: Germany Node
+    check: "tcp-ping"
+    url: 116.203.189.202
+    port: 2022
+  - name: Romania Node
+    check: "tcp-ping"
+    url: 80.97.49.110
+    port: 2022
+  - name: Mail
+    check: "tcp-ping"
+    url: http://mail.fastguard.ro
+    port: 587
+  - name: Webmail
+    url: https://webmail.fastguard.ro
+  - name: File Uploader
+    url: https://i.fastguard.ro
+  - name: TeamSpeak 3 Server
+    check: "tcp-ping"
+    url: 185.225.3.206
+    port: 9987
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
+  cname: status.fastguard.ro
+  theme: ocean
   # baseUrl: /your-repo-name
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: FASTGUARD-Status
